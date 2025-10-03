@@ -36,7 +36,30 @@ const analyticsData = [
    * @param {Object} user - User object with avgSessionDuration property
    * @returns {string} "Good" or "Low"
    */
-  const getEngagementLevel = (user) => {
+
+
+// First Attempt
+
+// if in analyticsData:
+//   if in @param { Object } user: 
+//   avgSessionDuration >= 200
+//   @returns {string} "Good" or "Low"
+
+
+// Second Attempt
+// if @param { Object } user in analyticsData {
+//   if (avgSessionDuration >= 200) {
+// @returns {string} "Good
+//   }
+//     else @returns {string} "Low"
+// }
+// else return null
+  
+const getEngagementLevel = (user) => {
+  if (user.avgSessionDuration >= 200) {
+    return "Good"
+  }
+    else return "Low" 
     // TODO: use if/else or ternary operator
     // Hint: Check if user.avgSessionDuration >= 200
   };
@@ -47,10 +70,24 @@ const analyticsData = [
    * @param {Array} data - Array of user objects
    * @returns {string} Name of user with longest session
    */
-  const findLongestSessionUser = (data) => {
+
+const findLongestSessionUser = (data) => {
+  for (user in analyticsData) {
+    for (user.totalSessions = 0; users++;) {
+    const sessionUser = user.totalSessions * user.avgSessionDuration
+    append (user.sessionUser in analyticsData)
+    if (sessionUser > i++) {
+      max = sessionUser 
+    }
+    return user.name
+  }
+ 
+
+  }
+
     // TODO: use for loop
     // Hint: Keep track of max duration and corresponding user name
-  };
+  
   
   /**
    * 3. Map
@@ -58,7 +95,11 @@ const analyticsData = [
    * @param {Array} data - Array of user objects
    * @returns {Array} Array of formatted strings like "Alice: 3 sessions"
    */
+  
   const formatSessions = (data) => {
+    const user.totalSessions = new Map();
+    user.totalSessions.set(${user.name}: ${user.totalSessions})
+    
     // TODO: use map
     // Hint: Use template literal `${user.name}: ${user.totalSessions} sessions`
   };
